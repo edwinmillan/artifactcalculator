@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "artifactcalculator"
+version = "0.1.0"
+description = ""
+authors = ["Edwin Millan <bassgs3000@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.0"
+coverage = "^7.5.0"
+pytest-asyncio = "^0.23.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

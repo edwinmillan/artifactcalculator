@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore VSCode settings
+.vscode/
+
+# App Specific
+app/logs/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+.coverage.json
+coverage.xml
