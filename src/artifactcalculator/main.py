@@ -13,7 +13,7 @@ def load_file(path: str) -> list[str]:
 def extract_power_components(line: str) -> list[list[int, int]]:
     components = []
     artifact_power_pattern = re.compile(r"^\(\d+\)")
-    pp_pattern = re.compile(r"(\d+) Lvl\. (\d+)")
+    pp_pattern = re.compile(r"(-?\d+) Lvl\. (\d+)")
 
     if artifact_power_pattern.match(line):
         line_components = pp_pattern.findall(line)

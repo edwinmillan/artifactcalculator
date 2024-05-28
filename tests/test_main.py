@@ -37,8 +37,9 @@ def test_extract_power_components(line, expected):
                 "(15) Defensive Facet: Defensive Empowerment (+10, 120 Lvl. 2 PP)",
                 "(25) Offensive Facet: Offensive Empowerment (+15, 60 Lvl. 3 PP)",
                 "(25) Offensive Facet: Special Attack: Lightning Palm (800 Ft Range, Max Damage, 80ft Radius, 80 Lvl. 2 PP, 80 Lvl. 3 PP)",
+                "(15) Innate Conjuring Facet: Automatic Spell (Casts Weight Increment at Arcane, 160 Lvl. 1 PP, Energy Charges, -30 Lvl. 1 PP, Condition: Magicite is the exclusive power source and determines additional uses. -30 Lvl. 1 PP) (-10 Zeon/Charge) (Duration: 1 Hour)",
             ],
-            [20, 240, 240, 480],
+            [20, 240, 240, 480, 100],
         ),
     ],
 )
