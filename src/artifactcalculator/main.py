@@ -1,7 +1,34 @@
 import re
+import tkinter as tk
 from pathlib import Path
+from tkinter import filedialog, messagebox
 
-import click
+
+class ArtifactCalculatorApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Artifact Calculator")
+
+        # Create and place widgets
+        frame = tk.Frame(root, padx=10, pady=10)
+        frame.pack(padx=10, pady=10)
+
+        self.result_label = tk.Label(frame, text="Result will be shown here")
+        self.result_label.pack(pady=5)
+
+        button = tk.Button(frame, text="Select File", command=self.select_file)
+        button.pack(pady=5)
+
+    def select_file(self):
+        filepath = filedialog.askopenfilename(
+            filetypes=[("Markdown files", "*.md"), ("Text files", "*.txt")]
+        )
+        if filepath:
+            try:
+                result = process_file(filepath)
+                self.result_label.config(text=result)
+            except Exception as e:
+                messagebox.showerror("Error", str(e))
 
 
 def load_file(path: str) -> list[str]:
@@ -72,19 +99,19 @@ def rank_artifact(total_l1_pp: int) -> str:
     return "Out of Range"
 
 
-def main(filepath: str):
+def process_file(filepath: str):
     data = load_file(filepath)
     parsed_data = parse_lines(data)
     total_pp = total_data(parsed_data)
     artifact_rank = rank_artifact(total_pp)
-    click.echo(f"{artifact_rank} ({total_pp})")
+    return f"{artifact_rank} ({total_pp})"
 
 
-@click.command()
-@click.argument("filepath", type=click.Path(exists=True))
-def cli(filepath: str):
-    main(filepath)
+def main():
+    root = tk.Tk()
+    app = ArtifactCalculatorApp(root)
+    root.mainloop()
 
 
 if __name__ == "__main__":
-    cli()
+    main()
