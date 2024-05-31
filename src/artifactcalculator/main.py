@@ -10,8 +10,8 @@ class ArtifactCalculatorApp:
         self.root.title("Artifact Calculator")
 
         # Create and place widgets
-        frame = tk.Frame(root, padx=10, pady=10)
-        frame.pack(padx=10, pady=10)
+        frame = tk.Frame(root, padx=60, pady=20)
+        frame.pack(padx=60, pady=10)
 
         self.result_label = tk.Label(frame, text="Result will be shown here")
         self.result_label.pack(pady=5)
