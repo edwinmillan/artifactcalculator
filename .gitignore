@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
+*.spec
 
 # pyenv
 .python-version
@@ -20,7 +21,8 @@ venv.bak/
 .vscode/
 
 # App Specific
-app/logs/
+build/
+dist/
 
 # Coverage reports
 .coverage
