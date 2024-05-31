@@ -1,18 +1,16 @@
 # ArtifactCalculator
 
 # Requirements
-This requires click `pip install click`, and python 3.10+ is recommended.
-
-Alternatively, you can install [Poetry](https://python-poetry.org/docs/#installation) and run `poetry install` 
+You can install [Poetry](https://python-poetry.org/docs/#installation) and run `poetry install` 
 
 
 # Running
 
 If you're running it without poetry:
-`python ./src/artifactcalculator/main.py <path_to_artifact_file>`
+`python ./src/artifactcalculator/main.py`
 
 With poetry:
-`poetry run python ./src/artifactcalculator/main.py <path_to_artifact_file>`
+`poetry run python ./src/artifactcalculator/main.py`
 
 Windows Executable from [Release Page](https://github.com/edwinmillan/artifactcalculator/releases/)
 `artifactcalculator.exe`
