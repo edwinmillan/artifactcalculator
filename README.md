@@ -13,3 +13,6 @@ If you're running it without poetry:
 
 With poetry:
 `poetry run python ./src/artifactcalculator/main.py <path_to_artifact_file>`
+
+Windows Executable from [Release Page](https://github.com/edwinmillan/artifactcalculator/releases/)
+`artifactcalculator.exe <path_to_artifact_file>`
